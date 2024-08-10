@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "BeatDaBoss.sln"
+    "dotnet.defaultSolution": "BeatDaBos.sln"
 }
