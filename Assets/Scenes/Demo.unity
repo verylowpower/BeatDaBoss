@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 73593873}
   - component: {fileID: 73593874}
   - component: {fileID: 73593875}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 73593872}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: a48468e55f131124dbb5bb407275f871, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -265,7 +265,8 @@ GameObject:
   - component: {fileID: 414657349}
   - component: {fileID: 414657348}
   - component: {fileID: 414657350}
-  m_Layer: 0
+  - component: {fileID: 414657351}
+  m_Layer: 6
   m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -333,7 +334,7 @@ Transform:
   m_GameObject: {fileID: 414657345}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.84, y: 1.1, z: 0}
+  m_LocalPosition: {x: 3.73, y: -0.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -389,17 +390,17 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
-  m_Material: {fileID: 6200000, guid: 1a71474bbd4c10e4eb868751e2109784, type: 2}
+  m_GravityScale: 2
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &414657350
 MonoBehaviour:
@@ -414,8 +415,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 9
-  drag: 0
+  groundDecay: 0.78
+  grounded: 0
+  groundCheck: {fileID: 414657351}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 128
   body: {fileID: 414657349}
+--- !u!61 &414657351
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414657345}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1.0245006}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.043332696}
+  m_EdgeRadius: 0
 --- !u!1 &633299638
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +478,7 @@ GameObject:
   - component: {fileID: 633299639}
   - component: {fileID: 633299641}
   - component: {fileID: 633299640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -458,7 +509,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 633299638}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: a48468e55f131124dbb5bb407275f871, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -698,7 +749,7 @@ GameObject:
   - component: {fileID: 1000717987}
   - component: {fileID: 1000717989}
   - component: {fileID: 1000717988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -828,7 +879,7 @@ GameObject:
   - component: {fileID: 1181452172}
   - component: {fileID: 1181452174}
   - component: {fileID: 1181452173}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
