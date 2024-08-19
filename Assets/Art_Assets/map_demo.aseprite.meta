@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8663f46b12e14ad4999d26e9dd6f344e
+guid: 34bfbdc8ed23cc745a48fc3ba0d3e308
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Character
+  - name: map_demo
     originalName: 
-    pivot: {x: 0.44074073, y: 0.13528337}
+    pivot: {x: 0.4995379, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 1080
-      height: 547
-    spriteID: 12edda3bb6515fc4e899c696d9d8a8c3
+      width: 1082
+      height: 461
+    spriteID: bcfccb0b17f80794da6c821bf4b47564
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,25 +144,25 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1246400679
-    name: Character
+    guid: 821942094
+    name: map_demo
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Character
+    - name: map_demo
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: -384
-        y: -74
-        width: 1080
-        height: 547
-      spriteId: 12edda3bb6515fc4e899c696d9d8a8c3
+        x: 0
+        y: 0
+        width: 1082
+        height: 461
+      spriteId: bcfccb0b17f80794da6c821bf4b47564
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 184, y: 297}
+  canvasSize: {x: 1081, y: 455}
