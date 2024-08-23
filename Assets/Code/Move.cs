@@ -4,13 +4,15 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
-public class Test : MonoBehaviour
+public class Move : MonoBehaviour
 {
 	float horizontal;
 	public float speed;
-	public float jumpForce;
+	public float jumpForce = 0.0f;
 	public bool isFacingRight = true;
-	public bool canJump;
+	public bool canJump = true;
+	
+	public PhysicsMaterial2D bounceMaterial, normalMaterial;
 
 	// private bool isWallSliding;
 	// private float wallSlidingSpeed = 2f;
@@ -28,10 +30,13 @@ public class Test : MonoBehaviour
 	//[SerializeField] private Transform wallCheck;
 	//[SerializeField] private LayerMask wallLayer;
 
-
 	void Update()
 	{
 		horizontal = Input.GetAxisRaw("Horizontal");
+		if(jumpForce ==0.0f && isGrounded())
+		{
+			MoveChar();
+		}
 		Jump();
 		// WallSlide();
 		// WallJump();
@@ -43,7 +48,8 @@ public class Test : MonoBehaviour
 		// }
 	}
 
-	private void LateUpdate()
+
+	private void MoveChar()
 	{
 		body.velocity = new Vector2(horizontal * speed, body.velocity.y);
 		// if (!isWallJumping)
@@ -53,37 +59,59 @@ public class Test : MonoBehaviour
 	}
 	private bool isGrounded()
 	{
-		return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+		bool grounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+		if (grounded)
+		{
+			canJump = true;
+		}
+		//Debug.Log("Is Grounded: " + grounded); // Kiểm tra xem có trả về true không
+		return grounded;
 	}
 
 	public void Jump()
-	{
-		if (Input.GetButtonDown("Jump") && isGrounded() && canJump)
+	{	
+		if(jumpForce >=0)
+		{
+			body.sharedMaterial = bounceMaterial;
+		}
+		else
+		{
+			body.sharedMaterial = normalMaterial;
+		}
+		
+		
+		if (Input.GetKey("space") && isGrounded()&&canJump)
 		{
 			jumpForce += 0.1f;
+			//Debug.Log("Jump Force Increased: " + jumpForce);
+		}
+		
+		if(Input.GetKeyDown("space") && isGrounded()&& canJump)
+		{
+			body.velocity = new Vector2 (0.0f,body.velocity.y);
 		}
 
-		if (jumpForce >= 20f && isGrounded())
+		if (jumpForce >= 20f && isGrounded()&&canJump)
 		{
 			float tempx = horizontal * speed;
 			float tempy = jumpForce;
 			body.velocity = new Vector2(tempx, tempy);
-
-			Invoke("ResetJump", 0.2f);
+			Debug.Log("Jump executed with force: " + jumpForce);
+			Invoke("ResetJump",0.2f);
 		}
-
-		if (Input.GetButtonDown("Jump") && isGrounded())
+		
+		if (Input.GetKeyUp("space"))
 		{
-			body.velocity = new Vector2(body.velocity.x, jumpForce);
-		}
-
-		if (Input.GetButtonUp("Jump") && body.velocity.y > 0f)
-		{
+			if(isGrounded())
+			{
+				body.velocity = new Vector2(horizontal*speed,jumpForce);
+				jumpForce = 0.0f;
+			}
 			canJump = true;
-			body.velocity = new Vector2(body.velocity.x, body.velocity.y * 0.5f);
 		}
-
+		
 	}
+
 
 	void ResetJump()
 	{
