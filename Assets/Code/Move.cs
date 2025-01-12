@@ -1,19 +1,32 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class Move : MonoBehaviour
-{
+{	
+	
 	float horizontal;
-	public float speed;
+	[Header(("Jump and Move"))]
+	public float speed;	
 	public float jumpForce = 0.0f;
-	public float jumpForce2 = 10.0f;
-	public bool isFacingRight = true;
+	public float jumpForce2 = 20.0f;
 	public bool canJump = true;
-
+	public bool isFacingRight = true;
+	
+	
+	[Header(("Dash"))]
+	public float dashSpeed;
+	public float dashCD = 1f;
+	public bool canDash = false;
+	public bool isDashing;
+	
+	
 	private float coyoteTime = 0.1f;
 	private float coyoteTimeCounter;
+	[Header(("Material"))]
 	public PhysicsMaterial2D bounceMaterial, normalMaterial;
-
+	
+	[Header(("Manage Object"))]
 	[SerializeField] Rigidbody2D body;
 	[SerializeField] Transform groundCheck;
 	[SerializeField] LayerMask groundLayer;
@@ -24,10 +37,12 @@ public class Move : MonoBehaviour
 		if (jumpForce == 0.0f && isGrounded())
 		{
 			MoveChar();
+			Dash();
 		}
 		//Jump();
-		JumpUp(); // Check for the LeftShift jump
+		JumpUp(); // Check for the Space jump
 		Flip();
+		
 	}
 
 	private void FixedUpdate()
@@ -56,12 +71,22 @@ public class Move : MonoBehaviour
 
 	public void JumpUp() // Jump straight up
 	{
-		if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded())
+		if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
 		{
 			body.velocity = new Vector2(horizontal*speed, jumpForce2); // Zero out horizontal velocity for straight-up jump
 			jumpForce = 0.0f;
 			canJump = false;
 		}
+	}
+
+	public void Dash()
+	{
+		if(Input.GetKeyDown(KeyCode.LeftShift) && isGrounded())
+		{	
+			body.velocity = new Vector2(horizontal+dashSpeed,body.velocity.y);
+			
+		}
+		
 	}
 
 	// public void Jump() // jump with power charge
@@ -105,11 +130,11 @@ public class Move : MonoBehaviour
 	// 	}
 	// }
 
-	void ResetJump()
-	{
-		canJump = false;
-		jumpForce = 0f;
-	}
+	// void ResetJump()
+	// {
+	// 	canJump = false;
+	// 	jumpForce = 0f;
+	// }
 
 	private void Flip()
 	{
