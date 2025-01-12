@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 34bfbdc8ed23cc745a48fc3ba0d3e308
+guid: 00657c3158943384a969ead989c23fa8
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: map_demo
     originalName: 
-    pivot: {x: 0.4995379, y: 0}
+    pivot: {x: 0.22181146, y: 0.54013014}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 1082
       height: 461
-    spriteID: bcfccb0b17f80794da6c821bf4b47564
+    spriteID: 64d93e67786a14740822a1c023f4d1da
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -155,14 +155,14 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 0
+        y: -249
         width: 1082
         height: 461
-      spriteId: bcfccb0b17f80794da6c821bf4b47564
+      spriteId: 64d93e67786a14740822a1c023f4d1da
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 1081, y: 455}
+  canvasSize: {x: 480, y: 206}
