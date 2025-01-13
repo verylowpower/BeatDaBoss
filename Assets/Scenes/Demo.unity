@@ -2074,6 +2074,22 @@ PrefabInstance:
       propertyPath: body
       value: 
       objectReference: {fileID: 770183803}
+    - target: {fileID: 3708997935791143345, guid: 4b9ab4fee784a9848b86f0cd9e3b845d, type: 3}
+      propertyPath: dashCD
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708997935791143345, guid: 4b9ab4fee784a9848b86f0cd9e3b845d, type: 3}
+      propertyPath: iFrame
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708997935791143345, guid: 4b9ab4fee784a9848b86f0cd9e3b845d, type: 3}
+      propertyPath: canDash
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708997935791143345, guid: 4b9ab4fee784a9848b86f0cd9e3b845d, type: 3}
+      propertyPath: dashSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4569105683018187559, guid: 4b9ab4fee784a9848b86f0cd9e3b845d, type: 3}
       propertyPath: m_IsTrigger
       value: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
@@ -15,10 +16,11 @@ public class Move : MonoBehaviour
 	
 	
 	[Header(("Dash"))]
-	public float dashSpeed;
+	public float dashSpeed = 10;
 	public float dashCD = 1f;
-	public bool canDash = false;
-	public bool isDashing;
+	public float iFrame = 0f;
+	public bool canDash = true; //dash flag
+	public bool isDashing = false;
 	
 	
 	private float coyoteTime = 0.1f;
@@ -27,20 +29,41 @@ public class Move : MonoBehaviour
 	public PhysicsMaterial2D bounceMaterial, normalMaterial;
 	
 	[Header(("Manage Object"))]
-	[SerializeField] Rigidbody2D body;
-	[SerializeField] Transform groundCheck;
-	[SerializeField] LayerMask groundLayer;
+	[SerializeField] private Rigidbody2D body;
+	[SerializeField] private Transform groundCheck;
+	[SerializeField] private LayerMask groundLayer;
 
 	void Update()
-	{
+	{	
+		if (isDashing)
+		{
+			return;
+		}
+		
 		horizontal = Input.GetAxisRaw("Horizontal");
 		if (jumpForce == 0.0f && isGrounded())
 		{
 			MoveChar();
-			Dash();
+			
 		}
 		//Jump();
 		JumpUp(); // Check for the Space jump
+		
+		if (Input.GetKeyDown(KeyCode.LeftShift))
+		{
+			Debug.Log("LeftShift key pressed");
+			if (canDash == true)
+			{
+				Debug.Log("Starting dash");
+				StartCoroutine(Dash());
+			}
+			else
+			{
+				Debug.Log("Dash is on cooldown");
+			}
+		}
+
+		
 		Flip();
 		
 	}
@@ -48,6 +71,11 @@ public class Move : MonoBehaviour
 	private void FixedUpdate()
 	{
 		isGrounded();
+		if (isDashing)
+		{
+			return;
+		}
+
 		if (isGrounded())
 			coyoteTimeCounter = coyoteTime;
 		else
@@ -79,13 +107,21 @@ public class Move : MonoBehaviour
 		}
 	}
 
-	public void Dash()
-	{
-		if(Input.GetKeyDown(KeyCode.LeftShift) && isGrounded())
-		{	
-			body.velocity = new Vector2(horizontal+dashSpeed,body.velocity.y);
-			
-		}
+	public IEnumerator Dash()
+	{	
+		Debug.Log("dash called");
+		canDash = false;
+		isDashing = true;
+		float orgGravity = body.gravityScale;
+		body.gravityScale = 0f;
+		float dashDirection = isFacingRight ? 1 : -1;
+		body.velocity = new Vector2(dashDirection* dashSpeed,0);
+		yield return new WaitForSeconds(iFrame);
+		body.gravityScale = orgGravity;
+		isDashing = false;
+		yield return new WaitForSeconds(dashCD);
+		canDash = true;
+		Debug.Log("Dash ended");
 		
 	}
 
