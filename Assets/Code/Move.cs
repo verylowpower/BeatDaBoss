@@ -16,9 +16,9 @@ public class Move : MonoBehaviour
 	
 	
 	[Header(("Dash"))]
-	public float dashSpeed = 10;
-	public float dashCD = 1f;
-	public float iFrame = 0f;
+	public float dashSpeed;
+	public float dashCD;
+	public float iFrame;
 	public bool canDash = true; //dash flag
 	public bool isDashing = false;
 	
@@ -108,22 +108,37 @@ public class Move : MonoBehaviour
 	}
 
 	public IEnumerator Dash()
-	{	
-		Debug.Log("dash called");
+	{
+		Debug.Log("Dash started");
 		canDash = false;
 		isDashing = true;
-		float orgGravity = body.gravityScale;
-		body.gravityScale = 0f;
-		float dashDirection = isFacingRight ? 1 : -1;
-		body.velocity = new Vector2(dashDirection* dashSpeed,0);
+
+		// Store the original gravity scale
+		float originalGravity = body.gravityScale;
+		body.gravityScale = 0f; // Disable gravity during dash
+
+		// Determine dash direction
+		float dashDirection = isFacingRight ? 1f : -1f;
+
+		// Set dash velocity directly
+		Vector2 dashVelocity = new(dashDirection * dashSpeed, 0f);
+		body.velocity = dashVelocity;
+
+		// Wait for the duration of the dash
 		yield return new WaitForSeconds(iFrame);
-		body.gravityScale = orgGravity;
+
+		// Restore gravity and stop dash
+		body.gravityScale = originalGravity;
+		body.velocity = new Vector2(0f, body.velocity.y); // Reset horizontal velocity
 		isDashing = false;
+
+		// Wait for cooldown before allowing the next dash
 		yield return new WaitForSeconds(dashCD);
 		canDash = true;
 		Debug.Log("Dash ended");
-		
 	}
+
+
 
 	// public void Jump() // jump with power charge
 	// {
