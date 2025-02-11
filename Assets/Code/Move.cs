@@ -84,7 +84,7 @@ public class Move : MonoBehaviour
 
 	private void MoveChar()
 	{
-		body.velocity = new Vector2(horizontal * speed, body.velocity.y);
+		body.linearVelocity = new Vector2(horizontal * speed, body.linearVelocity.y);
 	}
 
 	private bool isGrounded()
@@ -101,7 +101,7 @@ public class Move : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
 		{
-			body.velocity = new Vector2(horizontal*speed, jumpForce2); // Zero out horizontal velocity for straight-up jump
+			body.linearVelocity = new Vector2(horizontal*speed, jumpForce2); // Zero out horizontal velocity for straight-up jump
 			jumpForce = 0.0f;
 			canJump = false;
 		}
@@ -122,14 +122,14 @@ public class Move : MonoBehaviour
 
 		// Set dash velocity directly
 		Vector2 dashVelocity = new(dashDirection * dashSpeed, 0f);
-		body.velocity = dashVelocity;
+		body.linearVelocity = dashVelocity;
 
 		// Wait for the duration of the dash
 		yield return new WaitForSeconds(iFrame);
 
 		// Restore gravity and stop dash
 		body.gravityScale = originalGravity;
-		body.velocity = new Vector2(0f, body.velocity.y); // Reset horizontal velocity
+		body.linearVelocity = new Vector2(0f, body.linearVelocity.y); // Reset horizontal velocity
 		isDashing = false;
 
 		// Wait for cooldown before allowing the next dash
