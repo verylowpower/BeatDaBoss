@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 90397299b818fa94798f2e95303b4845
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2310936471723727151
+    second: boss_animation_dash_0
+  - first:
+      213: 3500652157485117890
+    second: boss_animation_dash_1
+  - first:
+      213: 3929378009638881206
+    second: boss_animation_dash_2
+  - first:
+      213: -2037598632488601810
+    second: boss_animation_dash_3
+  - first:
+      213: -6705265254578913180
+    second: boss_animation_dash_4
+  - first:
+      213: -2221714074017764543
+    second: boss_animation_dash_5
+  - first:
+      213: -7496928573332289474
+    second: boss_animation_dash_6
+  - first:
+      213: -6058927448019792397
+    second: boss_animation_dash_7
+  - first:
+      213: 1720893608113579539
+    second: boss_animation_dash_8
+  - first:
+      213: -3472808382326945664
+    second: boss_animation_dash_9
+  - first:
+      213: 7114194346288323155
+    second: boss_animation_dash_10
+  - first:
+      213: 8023185102983440101
+    second: boss_animation_dash_11
+  - first:
+      213: 7138992516015352570
+    second: boss_animation_dash_12
+  - first:
+      213: 1193425324110225157
+    second: boss_animation_dash_13
+  - first:
+      213: 2658223891114823301
+    second: boss_animation_dash_14
+  - first:
+      213: 5630254399011043633
+    second: boss_animation_dash_15
+  - first:
+      213: -7801678061349321324
+    second: boss_animation_dash_16
+  - first:
+      213: -254120664477983739
+    second: boss_animation_dash_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_animation_dash_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 344
+        width: 151
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6a968d587edefd0800000000000000
+      internalID: -2310936471723727151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_1
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 344
+        width: 151
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c1fa190790d49030800000000000000
+      internalID: 3500652157485117890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_2
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 344
+        width: 151
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7c1c42b74f78630800000000000000
+      internalID: 3929378009638881206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_3
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 345
+        width: 152
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27f1b3e6def8b3e0800000000000000
+      internalID: -2037598632488601810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_4
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 345
+        width: 150
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4600e08e6cc12f2a0800000000000000
+      internalID: -6705265254578913180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_5
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 240
+        width: 261
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b6fa122d2ea21e0800000000000000
+      internalID: -2221714074017764543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_6
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 238
+        width: 269
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e388d08de2f85f790800000000000000
+      internalID: -7496928573332289474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_7
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 239
+        width: 269
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd8aec669d5aeba0800000000000000
+      internalID: -6058927448019792397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_8
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 238
+        width: 269
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316a9df6e97d1e710800000000000000
+      internalID: 1720893608113579539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_9
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 239
+        width: 270
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088476e0d2b1ecfc0800000000000000
+      internalID: -3472808382326945664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_10
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 127
+        width: 253
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a9b99b012bab260800000000000000
+      internalID: 7114194346288323155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_11
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 126
+        width: 233
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e6a88ea754185f60800000000000000
+      internalID: 8023185102983440101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_12
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 125
+        width: 225
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa644b8edbc21360800000000000000
+      internalID: 7138992516015352570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_13
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 126
+        width: 209
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f9b8d5206ef8010800000000000000
+      internalID: 1193425324110225157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_14
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 121
+        width: 151
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e0b5b8b88e3e420800000000000000
+      internalID: 2658223891114823301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_15
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 9
+        width: 150
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1393228ab8ea22e40800000000000000
+      internalID: 5630254399011043633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_16
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 8
+        width: 150
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 495c055632fdab390800000000000000
+      internalID: -7801678061349321324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_animation_dash_17
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 8
+        width: 151
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c14bf1a9e297cf0800000000000000
+      internalID: -254120664477983739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      boss_animation_dash_0: -2310936471723727151
+      boss_animation_dash_1: 3500652157485117890
+      boss_animation_dash_10: 7114194346288323155
+      boss_animation_dash_11: 8023185102983440101
+      boss_animation_dash_12: 7138992516015352570
+      boss_animation_dash_13: 1193425324110225157
+      boss_animation_dash_14: 2658223891114823301
+      boss_animation_dash_15: 5630254399011043633
+      boss_animation_dash_16: -7801678061349321324
+      boss_animation_dash_17: -254120664477983739
+      boss_animation_dash_2: 3929378009638881206
+      boss_animation_dash_3: -2037598632488601810
+      boss_animation_dash_4: -6705265254578913180
+      boss_animation_dash_5: -2221714074017764543
+      boss_animation_dash_6: -7496928573332289474
+      boss_animation_dash_7: -6058927448019792397
+      boss_animation_dash_8: 1720893608113579539
+      boss_animation_dash_9: -3472808382326945664
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
