@@ -2246,6 +2246,7 @@ GameObject:
   - component: {fileID: 1694981768}
   - component: {fileID: 1694981767}
   - component: {fileID: 1694981769}
+  - component: {fileID: 1694981770}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -2262,7 +2263,7 @@ Transform:
   m_GameObject: {fileID: 1694981758}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.863, y: -0.044, z: -0.1912511}
+  m_LocalPosition: {x: 7.455, y: 0.303, z: -0.1912511}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2353,7 +2354,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1694981758}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2480,6 +2481,8 @@ MonoBehaviour:
   m_BlackboardVariableOverridesList:
   - rid: 5676876472185258093
   - rid: 5676876476624666778
+  - rid: 5676876495011184680
+  - rid: 5676876540667756776
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -2503,6 +2506,22 @@ MonoBehaviour:
         m_Value:
         - {fileID: 1837950054}
         - {fileID: 988188474}
+    - rid: 5676876495011184680
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 14660253431526280177
+          m_Value1: 4885867733437273012
+        Name: Target
+        m_Value: {fileID: 770183800}
+    - rid: 5676876540667756776
+      type: {class: 'BlackboardVariable`1[[RangeDectector, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 4442016659413435325
+          m_Value1: 2446842775261090067
+        Name: New Range Dectector
+        m_Value: {fileID: 1694981770}
 --- !u!195 &1694981768
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2512,17 +2531,17 @@ NavMeshAgent:
   m_GameObject: {fileID: 1694981758}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.53
-  m_Speed: 3.95
+  m_Radius: 1
+  m_Speed: 4.4
   m_Acceleration: 8
   avoidancePriority: 46
-  m_AngularSpeed: 120
+  m_AngularSpeed: 120.48
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.05
-  m_BaseOffset: 0.45
+  m_Height: 1.03
+  m_BaseOffset: 0.55
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1694981769
@@ -2537,6 +2556,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e39f6090724e4a4a8aadeb042afa2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1694981770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694981758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f35ef5954e91749bff181c639ba03d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 4.5
+  detectionMark:
+    serializedVersion: 2
+    m_Bits: 64
+  showDebugVisual: 1
 --- !u!1 &1830970040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2762,7 +2798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 749109304311808014, guid: 4b9ab4fee784a9848b86f0cd9e3b845d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.58
+      value: 2.21
       objectReference: {fileID: 0}
     - target: {fileID: 749109304311808014, guid: 4b9ab4fee784a9848b86f0cd9e3b845d, type: 3}
       propertyPath: m_LocalPosition.z
